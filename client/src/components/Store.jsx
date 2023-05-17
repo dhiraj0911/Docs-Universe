@@ -168,7 +168,7 @@ class Store extends Component {
     return (
       <section id="store" className="p-5">
         <MetaTags>
-          <title>Store - DU</title>
+          <title>Store</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"

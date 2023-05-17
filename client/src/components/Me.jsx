@@ -8,6 +8,8 @@ import MetamaskAsset from "../assets/img/metamask.png";
 import Filecoin from "../assets/img/filecoin.png";
 import Ipfs from "../assets/img/ipfs.png";
 import Ethereum from "../assets/img/ethereum.png";
+import Polygon from "../assets/img/Polygon.png";
+
 // Contract
 import PlanetOfDocs from "../contracts/PlanetOfDocs.json";
 import getWeb3 from "../getWeb3";
@@ -47,7 +49,7 @@ class Me extends Component {
     return (
       <section id="Me" className="p-5">
         <MetaTags>
-          <title>Me - DU</title>
+          <title>Me</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta id="meta-description" name="description" content="Ethereum x IPFS DApp." />
           <meta id="og-title" property="og:title" content="Planet of Docs" />
@@ -130,24 +132,20 @@ class Me extends Component {
               </div>
             </div>
           </div>
-          
           <div className="container">
             <div className="row align-items-center justify-content-between">
               <div className="col-md text-center">
-                <img src={MetamaskAsset} className="img-fluid" width="50%" height="50%" alt="" />
+                <img src={Polygon} className="img-fluid" width="50%" height="50%" alt="" />
               </div>
               <div className="col-md p-5">
-                <h2>Metamask</h2>
+                <h2>Polygon</h2>
                 <p className="lead">
-                  A crypto wallet &#38; gateway to blockchain apps.
-                </p>
+                Polygon is the most proven way to build and scale decentralized application and projects on Ethereum</p>
                 <p>
-                  Available as a browser extension and as a mobile app, 
-                  MetaMask equips you with a key vault, secure login, token wallet, and token exchange everything
-                  you need to manage your digital assets.
+                Polygon uses a modified proof of stake consensus mechanism that enables a consensus to be achieved with every block. Achieving consensus using traditional proof of stake requires processing many blocks to achieve consensus. The proof of stake method requires network participants to stake—agree to not trade or sell—their MATIC tokens.
                 </p>
-                <a href="https://metamask.io/" className="btn btn-light mt-3" target="_blank" rel="noreferrer">
-                  <i className="bi bi-chevron-right"></i> Metamask
+                <a href="https://polygon.technology/" className="btn btn-light mt-3" target="_blank" rel="noreferrer">
+                  <i className="bi bi-chevron-right"></i> Polygon
                 </a>
               </div>
             </div>

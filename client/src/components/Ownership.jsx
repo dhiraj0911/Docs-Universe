@@ -178,7 +178,7 @@ class Ownership extends Component {
     return (
       <section id="Ownership" className="p-5">
         <MetaTags>
-          <title>Ownership - DU</title>
+          <title>Ownership</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"

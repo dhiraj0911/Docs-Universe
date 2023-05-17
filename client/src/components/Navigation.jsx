@@ -2,13 +2,20 @@ import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import logo from '../assets/img/logo.jpg';
 
 function Navigation() {
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3">
         <div className="container">
-          <a href="/" className="navbar-brand">Docs Universe</a>
+          //logo image
+          
+          <a href="/" className="navbar-brand">
+            <img src={logo} className="img-fluid" alt="" height={30} width={30}/>
+            &nbsp;
+            Docs Universe
+          </a>
 
           <button
             className="navbar-toggler"

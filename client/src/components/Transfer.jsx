@@ -152,7 +152,7 @@ class Transfer extends Component {
     return (
       <section id="Transfer" className="p-5">
         <MetaTags>
-          <title>Transfer - DU</title>
+          <title>Transfer</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
