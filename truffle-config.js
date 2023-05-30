@@ -17,6 +17,15 @@ module.exports = {
       },
       network_id: 80001,
     },
+    goerli: {
+      provider: function () {
+        return new HDWalletProvider(
+          "clean script pink doll tower flock game under meadow apart sweet paddle",
+          "https://eth-goerli.g.alchemy.com/v2/XEL7Bu2in_J0nt2Lnpd3TW4O8TG7GLdj"
+        );
+      },
+      network_id: 5,
+    },
     ganache: {
       host: "127.0.0.1",
       port: 8545, 
