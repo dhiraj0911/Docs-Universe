@@ -1,5 +1,5 @@
-var PlanetOfDocs = artifacts.require("./PlanetOfDocs.sol");
+var DocsUniverse = artifacts.require("./DocsUniverse.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(PlanetOfDocs);
+  deployer.deploy(DocsUniverse);
 };

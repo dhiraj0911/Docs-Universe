@@ -9,10 +9,19 @@ import StoreAsset from "../assets/img/store.png";
 
 // Contract
 import getWeb3 from "../getWeb3";
-import PlanetOfDocs from "../contracts/PlanetOfDocs.json";
+import DocsUniverse from "../contracts/DocsUniverse.json";
 
 // IPFS
 import ipfs from "../ipfs";
+
+
+//web3.storage
+// import process from 'process'
+// import minimist from 'minimist'
+import { Web3Storage } from 'web3.storage'
+// const { create, get } = require('web3.storage')
+
+
 
 class CheckFileExistError extends Error {
   constructor(message, type) {
@@ -41,9 +50,9 @@ class Store extends Component {
   componentDidMount = async () => {
     const web3 = await getWeb3();
     const networkId = await web3.eth.net.getId();
-    const deployedNetwork = PlanetOfDocs.networks[networkId];
+    const deployedNetwork = DocsUniverse.networks[networkId];
     const instance = new web3.eth.Contract(
-      PlanetOfDocs.abi,
+      DocsUniverse.abi,
       deployedNetwork && deployedNetwork.address
     );
     this.setState({ web3, contract: instance });

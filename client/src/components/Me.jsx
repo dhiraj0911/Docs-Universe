@@ -11,7 +11,7 @@ import Ethereum from "../assets/img/ethereum.png";
 import Polygon from "../assets/img/Polygon.png";
 
 // Contract
-import PlanetOfDocs from "../contracts/PlanetOfDocs.json";
+import DocsUniverse from "../contracts/DocsUniverse.json";
 import getWeb3 from "../getWeb3";
 
 class Me extends Component {
@@ -24,8 +24,8 @@ class Me extends Component {
   componentDidMount = async () => {
     const web3 = await getWeb3();
     const networkId = await web3.eth.net.getId();
-    const deployedNetwork = PlanetOfDocs.networks[networkId];
-    const instance = new web3.eth.Contract(PlanetOfDocs.abi,
+    const deployedNetwork = DocsUniverse.networks[networkId];
+    const instance = new web3.eth.Contract(DocsUniverse.abi,
       deployedNetwork && deployedNetwork.address,
     );
     this.setState({ web3, contract: instance})

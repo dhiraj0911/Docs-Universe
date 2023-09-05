@@ -9,7 +9,7 @@ import Table from "./Table";
 
 // Contract
 import getWeb3 from "../getWeb3";
-import PlanetOfDocs from "../contracts/PlanetOfDocs.json";
+import DocsUniverse from "../contracts/DocsUniverse.json";
 
 // IPFS
 import ipfs from "../ipfs";
@@ -41,9 +41,9 @@ class Ownership extends Component {
   componentDidMount = async () => {
     const web3 = await getWeb3();
     const networkId = await web3.eth.net.getId();
-    const deployedNetwork = PlanetOfDocs.networks[networkId];
+    const deployedNetwork = DocsUniverse.networks[networkId];
     const instance = new web3.eth.Contract(
-      PlanetOfDocs.abi,
+      DocsUniverse.abi,
       deployedNetwork && deployedNetwork.address
     );
     this.setState({ web3, contract: instance });
