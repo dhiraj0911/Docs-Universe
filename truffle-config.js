@@ -3,28 +3,19 @@ require("dotenv").config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 const mnemonic = process.env.MNEMONIC;
-const alchemyKey = process.env.ALCHEMY;
+const RPC_URL = process.env.RPC_URL;
 
 module.exports = {
   contracts_build_directory: path.join(__dirname, "client/src/contracts"),
   networks: {
-    mumbai: {
+    sepolia: {
       provider: function () {
         return new HDWalletProvider(
           mnemonic,
-          `https://polygon-mumbai.g.alchemy.com/v2/${alchemyKey}`
+          RPC_URL
         );
       },
-      network_id: 80001,
-    },
-    goerli: {
-      provider: function () {
-        return new HDWalletProvider(
-          mnemonic,
-          `https://eth-goerli.g.alchemy.com/v2/${alchemyKey}`
-        );
-      },
-      network_id: 5,
+      network_id: 11155111,
     },
     ganache: {
       host: "127.0.0.1",
