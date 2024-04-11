@@ -15,13 +15,6 @@ import DocsUniverse from "../contracts/DocsUniverse.json";
 import ipfs from "../ipfs";
 
 
-//web3.storage
-// import process from 'process'
-// import minimist from 'minimist'
-import { Web3Storage } from 'web3.storage'
-// const { create, get } = require('web3.storage')
-
-
 
 class CheckFileExistError extends Error {
   constructor(message, type) {
