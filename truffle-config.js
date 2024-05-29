@@ -8,14 +8,14 @@ const RPC_URL = process.env.RPC_URL;
 module.exports = {
   contracts_build_directory: path.join(__dirname, "client/src/contracts"),
   networks: {
-    sepolia: {
+    base_sepolia: {
       provider: function () {
         return new HDWalletProvider(
           mnemonic,
           RPC_URL
         );
       },
-      network_id: 11155111,
+      network_id: 84532,
     },
     ganache: {
       host: "127.0.0.1",
